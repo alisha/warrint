@@ -60,7 +60,7 @@ run_subfolder() {
       --output-pdf "$OUTPUT_DIR/${f}_annotated.pdf" \
       --use-intermediate-csv-path "$INPUT_DIR/${f}_ocr.csv" \
       --dimensions-csv-path "$DIMENSIONS_CSV" \
-      --seal-csv-path seal_detections.csv \
+      --seal-csv-path examples/seal_detections.csv \
       && echo "  SUCCESS: Output saved to $OUTPUT_DIR/${f}_annotated.pdf" \
       || echo "  FAILED: See error above"
 

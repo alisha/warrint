@@ -146,6 +146,7 @@ def main(
   dimensions_csv_path=None,
   seal_csv_path=None,
   debug=False,
+  case_insensitive=False
 ):
   # --- Step 1: Decode optar data from last page ---
   sig, pubkey, original_dimensions, original_ocr_df, valid = decode_optar_page(input_pdf, debug=debug)
@@ -190,6 +191,7 @@ def main(
     output_filename=output_pdf,
     seals=seals,
     top_filter=0.05,
+    case_insensitive=case_insensitive
   )
 
 
@@ -204,6 +206,7 @@ if __name__ == "__main__":
   parser.add_argument("--seal-csv-path", help="Path to seal_detections.csv for seal filtering")
   parser.add_argument("--save-intermediate-csv-path", help="Save OCR results to this CSV path")
   parser.add_argument("--debug", action="store_true", help="Enable debug output")
+  parser.add_argument("--case-insensitive", action="store_true", help="Convert text in both documents to lowercase and find case-insensitive differences")
 
   args = parser.parse_args()
 

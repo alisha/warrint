@@ -47,10 +47,11 @@ Note that we provide precomputed OCR outputs, since the tool we use (Google Docu
     - `lib/data_encoding.py` contains code to generate the document description, encode and compress it, and decompress and decode it.
     - `lib/optar_lib.py` is a Python wrapper around the `optar` library used to generate 2D-barcodes of the encoded and compressed document description.
     - `lib/detect_differences.py` contains code to determine how the document has been modified and generate the provider's output PDF with annotations.
-- `Seal Detection.ipynb` contains our code to determine whether a document has seals, and to return their bounding boxes. We currently run this as an offline processing step and our code retrieves the seals from `seal_detections.csv`; we plan to integrate this into `court.py` as an online step.
+- `Seal Detection.ipynb` contains our code to determine whether a document has seals, and to return their bounding boxes. We currently run this as an offline processing step and our code retrieves the seals from `examples/seal_detections.csv`; we plan to integrate this into `court.py` as an online step.
 - `examples/` contains example files for running and testing the code.
     - `examples/example_private_key.pem` and `examples/example_public_key.pem` are example Ed25519 keys for use with `court.py` and `provider.py`. New keys can be generated with `python3 scripts/generate_keys.py`.
     - `examples/dimensions.csv` stores precomputed page dimensions for the example PDFs.
+    - `examples/seal_detections.csv` stores precomputed seal bounding boxes for the example PDFs.
     - `examples/pdfs/` contains example PDFs as described above.
 - `PACER Cases.csv` contains the case numbers and links to the PACER headers that can be used to reconstruct our training and test dataset.
  
