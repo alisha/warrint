@@ -1,0 +1,2 @@
+pdf_name,page_num,total_pages,detected,confidence,bbox_xmin,bbox_ymin,bbox_xmax,bbox_ymax,matched_query,page_width,page_height
+wied-221mj00530SCD.pdf,1,5,True,0.3633347749710083,1914.8165283203125,123.82244873046876,2349.456298828125,524.630126953125,small circular government seal,2550,3301
